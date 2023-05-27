@@ -2,11 +2,11 @@ package org.example;
 
 public class Main {
     public static void main(String[] args) {
-        ConfigManager manager = new ConfigManager();
+        ConfigManager manager = ConfigManager.getInstance();
         manager.set("name", "Eli");
 
-        ConfigManager other = new ConfigManager();
-        System.out.println(other.get("name"));
+        ConfigManager other = ConfigManager.getInstance();
+        System.out.println(other.get("name"));   //all the time have single instance of ConfigManager class
 
     }
 }
